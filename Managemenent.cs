@@ -19,5 +19,21 @@ namespace ProjectManagmentLinq
                 Console.WriteLine("*************");
             }
         }
+
+        public static void GetSelectedValues(List<Productreview> listobj)
+        {
+            var ProductData = from product in listobj
+                              where (product.ProductID == 1 && product.rating > 3 ||
+                              product.ProductID == 4 && product.rating > 3 ||
+                              product.ProductID == 9 && product.rating > 3)
+                              select product;
+
+            foreach (var product in ProductData)
+            {
+                Console.WriteLine("*************");
+                Console.WriteLine(product.ProductID + " | " + product.Userid + " | " + product.rating + " | " + product.Review + "  | " + product.Islike);
+                Console.WriteLine("*************");
+            }
+        }
     }
 }

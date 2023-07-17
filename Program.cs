@@ -30,7 +30,8 @@ namespace ProjectManagmentLinq
             }
 
            // Managemenent.Top3Records(listobj);
-            Managemenent.GetSelectedValues(listobj);
+           // Managemenent.GetSelectedValues(listobj);
+            Managemenent.GetCount(listobj);
         }
     }
 }

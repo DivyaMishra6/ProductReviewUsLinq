@@ -35,5 +35,14 @@ namespace ProjectManagmentLinq
                 Console.WriteLine("*************");
             }
         }
+
+        public static void GetCount(List<Productreview> listobj)
+        {
+            var productdata = listobj.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Count = x.Count() });
+            foreach (var product in productdata)
+            {
+                Console.WriteLine(product.ProductID + " " + product.Count);
+            }
+        }
     }
 }

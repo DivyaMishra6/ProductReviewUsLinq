@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProjectManagmentLinq
 {
-    public class ProductReview
+    public class Productreview
     {
-        public int Productid { get; set; }
-        public int UserID { get; set; }
-        public double Rating { get; set; }
+        public int ProductID { get; set; }
+
+        public int Userid { get; set; }
+
         public string Review { get; set; }
-        public bool IsLike { get; set; }
+        public int rating { get; set; }
+        public bool Islike { get; set; }
     }
 }

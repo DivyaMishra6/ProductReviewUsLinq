@@ -29,7 +29,8 @@ namespace ProjectManagmentLinq
                 Console.WriteLine(product.ProductID + "  | " + product.Userid + "  | " + product.rating + " | " + product.Review + " | " + product.Islike);
             }
 
-            Managemenent.Top3Records(listobj);
+           // Managemenent.Top3Records(listobj);
+            Managemenent.GetSelectedValues(listobj);
         }
     }
 }
